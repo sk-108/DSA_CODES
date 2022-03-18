@@ -1,16 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+long long int mod = 1e9+7;
 void solve()
 {
-    int n;
-    cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
-    {
-        res += n/i;
-    }
-    cout<<res<<endl;
+    long long int a ,b;
+    cin>>a>>b;
+    cout<<((a%mod)*(b%mod))%mod<<endl;
 }
 
 signed main(){
@@ -19,4 +15,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

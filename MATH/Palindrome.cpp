@@ -5,12 +5,14 @@ void solve()
 {
     int n;
     cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
+    int temp = 0,t = n;
+    while(t!=0)    
     {
-        res += n/i;
+        temp = temp*10 + t%10;
+        t =  t/10;
     }
-    cout<<res<<endl;
+    if(temp == n)cout<<"panlindrome no "<<endl;
+    else cout<<"not a palindrome no "<<endl;
 }
 
 signed main(){
@@ -19,4 +21,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

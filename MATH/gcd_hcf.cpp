@@ -3,14 +3,17 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
+    int a,b;
+    cin>>a>>b;
+    int ans = min(a,b);
+    for(int i=ans;i>=1;i--)
     {
-        res += n/i;
+        if(a%i ==  0 && b%i==0)
+        {
+            cout<<i<<endl;
+            break;
+        }
     }
-    cout<<res<<endl;
 }
 
 signed main(){
@@ -19,4 +22,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

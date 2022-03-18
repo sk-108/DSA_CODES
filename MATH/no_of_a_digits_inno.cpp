@@ -5,12 +5,13 @@ void solve()
 {
     int n;
     cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
+    double logval  = 0;
+
+    for(int i=1;i<=n;i++)
     {
-        res += n/i;
+        logval +=log10(i);
     }
-    cout<<res<<endl;
+    cout<<floor(logval)+1<<endl;
 }
 
 signed main(){
@@ -19,4 +20,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

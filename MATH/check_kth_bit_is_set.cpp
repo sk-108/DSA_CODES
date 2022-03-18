@@ -5,12 +5,12 @@ void solve()
 {
     int n;
     cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
-    {
-        res += n/i;
-    }
-    cout<<res<<endl;
+    int k;
+    cin>>k;
+    // if(n&1<<(k-1))cout<<"Yes";
+    // else cout<<"No"<<endl;
+    if(n>>(k-1) & 1)cout<<"Yes";
+    else cout<<"No"<<endl;
 }
 
 signed main(){
@@ -19,4 +19,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

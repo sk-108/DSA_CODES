@@ -3,14 +3,14 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
+    int x,n;
+    cin>>x>>n;
+    int ans = 1;
+    for(int i=0;i<n;i++)    
     {
-        res += n/i;
+        ans *=x;
     }
-    cout<<res<<endl;
+    cout<<ans<<endl;
 }
 
 signed main(){
@@ -19,4 +19,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

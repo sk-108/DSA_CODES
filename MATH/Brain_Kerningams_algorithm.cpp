@@ -6,9 +6,10 @@ void solve()
     int n;
     cin>>n;
     int res = 0;
-    for(int i=5;i<=n;i*=5)
+    while(n>0)   
     {
-        res += n/i;
+        n = (n&(n-1));
+        res++;
     }
     cout<<res<<endl;
 }
@@ -19,4 +20,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

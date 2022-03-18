@@ -1,16 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+int countDigits(int n)
+{
+    int count =  0;
+    while(n!=0)
+    {
+        count++;
+        n = n/10;
+    }
+    return count;
+}
+
 void solve()
 {
     int n;
     cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
-    {
-        res += n/i;
-    }
-    cout<<res<<endl;
+    cout<<countDigits(n);
 }
 
 signed main(){
@@ -19,4 +25,3 @@ signed main(){
     //int _t;cin>>_t;while(_t--)
     solve();
 }
-

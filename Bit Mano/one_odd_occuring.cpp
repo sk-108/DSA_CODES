@@ -5,10 +5,19 @@ void solve()
 {
     int n;
     cin>>n;
-    int res = 0;
-    for(int i=5;i<=n;i*=5)
+    vector<int>arr(n);
+    for(int i=0;i<n;i++)
     {
-        res += n/i;
+        cin>>arr[i];
+    }
+    int res = 0;
+    for(int i=1;i<=n+1;i++)
+    {
+        res = res^i;
+    }
+    for(int i=0;i<n;i++)
+    {
+        res = res^arr[i];
     }
     cout<<res<<endl;
 }
